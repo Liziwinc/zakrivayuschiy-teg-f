@@ -225,7 +225,6 @@
   transition: 0.3s ease;
 }
 
-
 .card__floppy-button{
   width: 335px;
   height: 55px;
@@ -234,24 +233,24 @@
 
 .floppy-dialog[open]{
   display:grid;
-  grid-template-columns: 59px 234px;
+  grid-template-columns: 0.25fr 1fr;
   justify-items: start;
   align-items: center;
+  row-gap: 30px;
 }
 
 .floppy-dialog {
-  inline-size: 353px;
+  inline-size: 360px;
   block-size: 191px;
-  padding-inline-start: 30px;
-  line-height: 150%;
+  padding: 30px;
   text-transform: uppercase;
+  line-height: 120%;
 }
 
 .card__floppy-button .floppy{
   inline-size: 25px;
   block-size: 25px;
   margin-inline-end: 8px;
-
   fill: #fff;
   position: relative; 
   z-index: 2;
@@ -275,14 +274,21 @@
   align-self: center;
 }
 
-@media (width < 376px){
+@media (width <= 375px){
   .floppy-dialog{
-    inline-size:341px;
+    inline-size:342px;
+    padding-inline: 40px;
   }
 
   .dialog__button{
     inline-size: 257px;
   }
 
-
+  .card__floppy-button{
+    width: 306px;
+    height: 84px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
 }
