@@ -42,20 +42,20 @@
   justify-items: center;
 }
 
-.header h1 {
+.header__title-main {
   font-size: var(--header-size, 65px);
 }
 
-.header h1 p:last-of-type {
+.header__title {
   font-size: var(--header-size-last, 23px);
 }
 
 @container header (width < 500px) {
-  .header h1 {
+  .header__title-main {
     font-size: 45px;
   }
 
-  .header h1 p:last-of-type {
+  .header__title{
     font-size: 14px;
   }
 }
