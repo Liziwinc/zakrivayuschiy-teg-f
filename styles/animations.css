@@ -44,15 +44,15 @@
 }
 
 .card__icon-button:hover .main-body {
-  fill: var(--name-black);
+  fill: var(--accent-color, #000);
 }
 
 .card__icon-button:active .main-body {
-  fill: var(--name-red);
+  fill: var(--heart-color, #f00);
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--name-red);
+  fill: var(--heart-color, #f00);
 }
 
 .core {
@@ -61,15 +61,15 @@
 }
 
 .card__icon-button:hover .core {
-  fill: var(--name-black);
+  fill: var(--accent-color, #000);
 }
 
 .card__icon-button:active .core {
-  fill: var(--name-red);
+  fill: var(--heart-color, #f00);
 }
 
 .like-icon.is-liked .core {
-  fill: var(--name-red);
+  fill: var(--heart-color, #f00);
 }
 
 .card__icon-button .main-body {
@@ -85,7 +85,7 @@
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--name-red);
+  fill: var(--heart-color, #f00);
 }
 
 .like-icon.is-liked .heart {
