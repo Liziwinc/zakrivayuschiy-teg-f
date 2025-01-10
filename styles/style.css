@@ -7,13 +7,15 @@
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 !!!
-*/
+
+
+* { outline: 1px solid green; }*/
 
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font, sans-serif);
-  font-variation-settings: 'wght'var(--heading-weight, 785);
+  font-variation-settings: "wght"var(--heading-weight, 785);
   background-attachment: fixed;
   background-image: var(--background-image);
   background-position: center;
@@ -23,18 +25,26 @@
 }
 
 .header {
-  inline-size: clamp(375px, 696px, 696px);
-  block-size: 364px;
+  max-inline-size: 700px;
+  padding: 128px 120px;
   background-color: var(--background-color, #fff);
   border: var(--border-color, #000) solid 2px;
   font-family: var(--accent-font, fantasy);
+  text-transform: uppercase;
   text-align: center;
   margin-block: 100px;
-  container-name: header;
-  container-type: size;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.header__title h1 {
+  font-size: var(--header-size, 65px);
+  margin-block-end: 18px;
+}
+
+.header__title h2 {
+  font-size: var(--header-size-last, 23px);
 }
 
 .main {
@@ -42,75 +52,66 @@
   justify-items: center;
 }
 
-.header__title-main {
-  font-size: var(--header-size, 65px);
-}
-
-.header__title {
-  font-size: var(--header-size-last, 23px);
-}
-
-@container header (width < 500px) {
-  .header__title-main {
-    font-size: 45px;
-  }
-
-  .header__title {
-    font-size: 14px;
-  }
-}
-
 .card {
-  inline-size: clamp(375px, 696px, 696px);
+  max-inline-size: 700px;
   border: var(--border-color, #000) solid 2px;
-  margin-block-start: 50px;
   background-color: var(--background-color, #fff);
 }
 
+.card:not(:last-of-type) {
+  margin-block-end: 50px;
+}
+
 .card__title {
-  font-size: 18px;
-  line-height: 22px;
   margin: 3px auto 3px 10px;
+  font-size: 18px;
+  font-variation-settings: "wght"var(--heading-weight, 700);
+  line-height: 21.78px;
+}
+
+.card__text:last-of-type {
+  margin-block-start: 0;
 }
 
 .card__image {
   position: relative;
   margin: 0;
   outline: solid var(--border-color, #000) 2px;
-  height: clamp(375px, 696px, 696px);
+  max-height: 696px;
 }
 
 .image {
   object-fit: cover;
+  object-position: center;
   inline-size: 100%;
   block-size: 100%;
 }
 
-.clean {
+.filter-grayscale {
   filter: grayscale(80%);
 }
 
-.cssif {
+.filter-contrast {
   filter: contrast(250%);
 }
 
-.desigions {
+.filter-rotate {
   filter: hue-rotate(0.5turn);
 }
 
-.care {
+.filter-invert {
   filter: invert(100%) brightness(60%);
 }
 
-.support {
+.filter-sepia {
   filter: sepia(0.6);
 }
 
-.l-s-none {
+.filter-blur {
   filter: blur(3px);
 }
 
-.experience {
+.filter-many {
   filter: saturate(390%) invert(100%) hue-rotate(0.5turn) brightness(60%);
 }
 
@@ -124,28 +125,30 @@
   color: var(--accent-color, #000);
   mix-blend-mode: hard-light;
   opacity: 0.5;
-  text-shadow:
-    -1px 0 var(--label-stroke-color, #FFF),
-    0 1px var(--label-stroke-color, #FFF),
-    1px 0 var(--label-stroke-color, #FFF),
-    0 -1px var(--label-stroke-color, #FFF);
-  top: 25px;
+  text-shadow: -1px 0 var(--label-stroke-color, #fff),
+    0 1px var(--label-stroke-color, #fff), 1px 0 var(--label-stroke-color, #fff),
+    0 -1px var(--label-stroke-color, #fff);
+  top: 30px;
   right: 25px;
 }
 
-@supports((text-stroke: 1px var(--label-stroke-color, #FFF)) or (-webkit-text-stroke: 1px var(--label-stroke-color, #FFF))) {
+@supports ((text-stroke: 1px var(--label-stroke-color, #fff)) or (-webkit-text-stroke: 1px var(--label-stroke-color, #fff))) {
   .card__image-label {
-    -webkit-text-stroke: 1px var(--label-stroke-color, #FFF);
-    text-stroke: 1px var(--label-stroke-color, #FFF);
+    -webkit-text-stroke: 1px var(--label-stroke-color, #fff);
+    text-stroke: 1px var(--label-stroke-color, #fff);
     text-shadow: none;
   }
 }
 
 .card__text {
-  font-variation-settings: 'wght'var(--text-weight, 400);
+  font-variation-settings: "wght"var(--text-weight, 400);
   font-size: 18px;
-  line-height: 21px;
+  line-height: 117%;
   margin: 25px;
+}
+
+.card__text:first-of-type {
+  margin-top: 34px;
 }
 
 .card__button {
@@ -170,6 +173,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
+  transition: 0.3s ease;
 }
 
 .button:focus {
@@ -178,11 +182,10 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px 0 var(--accent-color, #000);
-  transition: 0.5s;
 }
 
 .button::before {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   background-color: var(--accent-color, #000);
@@ -222,7 +225,6 @@
 .card__icon-button:focus-visible {
   border: 2px solid var(--border-color);
   opacity: 1;
-  transition: 0.3s ease;
 }
 
 .card__floppy-button {
@@ -240,8 +242,8 @@
 }
 
 .floppy-dialog {
-  inline-size: 360px;
-  block-size: 191px;
+  inline-size: 359px;
+  block-size: 192px;
   padding: 30px;
   text-transform: uppercase;
   line-height: 120%;
@@ -252,14 +254,15 @@
   block-size: 25px;
   margin-inline-end: 8px;
   fill: var(--button-txt-color, #fff);
+  mix-blend-mode: difference;
   position: relative;
   z-index: 2;
-  mix-blend-mode: difference;
 }
 
 .floppy-dialog .floppy {
   inline-size: 39px;
   block-size: 39px;
+  fill: #000;
 }
 
 .floppy-dialog::backdrop {
@@ -272,12 +275,54 @@
   grid-column: span 2;
   justify-self: center;
   align-self: center;
+  text-transform: uppercase;
 }
 
 @media (width <=375px) {
+  .header {
+    inline-size: 375px;
+    margin-block-end: 100px;
+    padding: 120px 14px;
+  }
+
+  .header__title h1 {
+    font-size: 49px;
+    margin-block-end: 20px;
+  }
+
+  .header__title h2 {
+    font-size: 14px;
+  }
+
+  .card {
+    inline-size: 375px;
+  }
+
+  .card:not(:last-of-type) {
+    margin-block-end: 50px;
+  }
+
+  .card__title {
+    margin-inline-end: 10px;
+    margin-block-end: 5px;
+  }
+
+  .card__text:first-of-type {
+    margin-block: 29px 27px;
+  }
+
+  .card__image {
+    max-height: 371px;
+  }
+
+  .card__image-label {
+    right: 13px;
+  }
+
   .floppy-dialog {
-    inline-size: 342px;
-    padding-inline: 40px;
+    inline-size: 345px;
+    block-size: 192px;
+    padding-inline: 35px;
   }
 
   .dialog__button {
@@ -290,5 +335,11 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+  }
+
+  .card__floppy-button .floppy {
+    inline-size: 32px;
+    block-size: 32px;
+    margin-inline-end: 0;
   }
 }

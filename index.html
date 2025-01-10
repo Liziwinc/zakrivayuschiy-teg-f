@@ -16,13 +16,13 @@
 
   <body class="page">
     <header class="header">
-      <h1 class="header__title">
-        <span class="header__title-main">&lt;/HTML&gt;</span>
-        закрывающий тег
-      </h1>
+      <div class="header__title">
+        <h1>&lt;/HTML&gt;</h1>
+        <h2>закрывающий тег</h2>
+      </div>
     </header>
     <main class="main">
-      <section class="card">
+      <article class="card">
         <!--1-->
         <h2 class="card__title">
           Фритрек и нулевой спринт: Подготовка к работе
@@ -44,9 +44,10 @@
         <p class="card__text">
           Место для ваших воспоминаний о начале обучения.
         </p>
-        <article class="card__button">
-          <button class="card__icon-button">
+        <div class="card__button">
+          <button type="button" class="card__icon-button">
             <svg
+              aria-hidden="true"
               class="like-icon"
               width="27"
               height="24"
@@ -77,13 +78,13 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
-        </article>
-      </section>
+        </div>
+      </article>
 
-      <section class="card">
+      <article class="card">
         <!--2-->
         <h2 class="card__title">1 спринт: Я — чистый лист</h2>
         <figure class="card__image">
@@ -92,7 +93,7 @@
             src="./images/image.png"
             loading="lazy"
             alt="Машина"
-            class="image clean"
+            class="image filter-grayscale"
           />
         </figure>
         <p class="card__text">
@@ -105,9 +106,10 @@
         <p class="card__text">
           Место для ваших воспоминаний о начале первого спринта.
         </p>
-        <article class="card__button">
-          <button class="card__icon-button">
+        <div class="card__button">
+          <button type="button" class="card__icon-button">
             <svg
+              aria-hidden="true"
               class="like-icon"
               width="27"
               height="24"
@@ -138,13 +140,13 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
-        </article>
-      </section>
+        </div>
+      </article>
 
-      <section class="card">
+      <article class="card">
         <!--3-->
         <h2 class="card__title">1 спринт: А если не получится?</h2>
         <figure class="card__image">
@@ -153,7 +155,7 @@
             src="./images/image.png"
             loading="lazy"
             alt="Машина"
-            class="image cssif"
+            class="image filter-contrast"
           />
         </figure>
         <p class="card__text">
@@ -164,9 +166,10 @@
         <p class="card__text">
           Место для ваших воспоминаний об окончании первого спринта.
         </p>
-        <article class="card__button">
-          <button class="card__icon-button">
+        <div class="card__button">
+          <button type="button" class="card__icon-button">
             <svg
+              aria-hidden="true"
               class="like-icon"
               width="27"
               height="24"
@@ -197,13 +200,13 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
-        </article>
-      </section>
+        </div>
+      </article>
 
-      <section class="card">
+      <article class="card">
         <!--4-->
         <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
         <figure class="card__image">
@@ -212,7 +215,7 @@
             src="./images/image.png"
             loading="lazy"
             alt="Машина"
-            class="image desigions"
+            class="image filter-rotate"
           />
         </figure>
         <p class="card__text">
@@ -225,9 +228,10 @@
         <p class="card__text">
           Место для ваших воспоминаний о начале второго спринта.
         </p>
-        <article class="card__button">
-          <button class="card__icon-button">
+        <div class="card__button">
+          <button type="button" class="card__icon-button">
             <svg
+              aria-hidden="true"
               class="like-icon"
               width="27"
               height="24"
@@ -258,13 +262,13 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
-        </article>
-      </section>
+        </div>
+      </article>
 
-      <section class="card">
+      <article class="card">
         <!--5-->
         <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
         <figure class="card__image">
@@ -273,7 +277,7 @@
             src="./images/image.png"
             loading="lazy"
             alt="Машина"
-            class="image care"
+            class="image filter-invert"
           />
         </figure>
         <p class="card__text">
@@ -286,9 +290,10 @@
         <p class="card__text">
           Место для ваших воспоминаний об окончании второго спринта.
         </p>
-        <article class="card__button">
-          <button class="card__icon-button">
+        <div class="card__button">
+          <button type="button" class="card__icon-button">
             <svg
+              aria-hidden="true"
               class="like-icon"
               width="27"
               height="24"
@@ -319,13 +324,13 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
-        </article>
-      </section>
+        </div>
+      </article>
 
-      <section class="card">
+      <article class="card">
         <!--6-->
         <h2 class="card__title">3 спринт: Обходные стратегии</h2>
         <figure class="card__image">
@@ -334,7 +339,7 @@
             src="./images/image.png"
             loading="lazy"
             alt="Машина"
-            class="image support"
+            class="image filter-sepia"
           />
         </figure>
         <p class="card__text">
@@ -345,9 +350,10 @@
         <p class="card__text">
           Место для ваших воспоминаний о начале третьего спринта.
         </p>
-        <article class="card__button">
-          <button class="card__icon-button">
+        <div class="card__button">
+          <button type="button" class="card__icon-button">
             <svg
+              aria-hidden="true"
               class="like-icon"
               width="27"
               height="24"
@@ -378,13 +384,13 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
-        </article>
-      </section>
+        </div>
+      </article>
 
-      <section class="card">
+      <article class="card">
         <!--7-->
         <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
         <figure class="card__image">
@@ -393,7 +399,7 @@
             src="./images/image.png"
             loading="lazy"
             alt="Машина"
-            class="image l-s-none"
+            class="image filter-blur"
           />
         </figure>
         <p class="card__text">
@@ -405,9 +411,10 @@
         <p class="card__text">
           Место для ваших воспоминаний об окончании третьего спринта.
         </p>
-        <article class="card__button">
-          <button class="card__icon-button">
+        <div class="card__button">
+          <button type="button" class="card__icon-button">
             <svg
+              aria-hidden="true"
               class="like-icon"
               width="27"
               height="24"
@@ -438,13 +445,13 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
-        </article>
-      </section>
+        </div>
+      </article>
 
-      <section class="card">
+      <article class="card">
         <!--8-->
         <h2 class="card__title">«Сейчас я здесь»</h2>
         <figure class="card__image">
@@ -453,7 +460,7 @@
             src="./images/image.png"
             loading="lazy"
             alt="Машина"
-            class="image experience"
+            class="image filter-many"
           />
         </figure>
         <p class="card__text">
@@ -468,9 +475,10 @@
           Место, чтобы остановиться, подумать и написать, что вы чувствуете в
           этой точке пути.
         </p>
-        <article class="card__button">
-          <button class="card__icon-button">
+        <div class="card__button">
+          <button type="button" class="card__icon-button">
             <svg
+              aria-hidden="true"
               class="like-icon"
               width="27"
               height="24"
@@ -501,11 +509,11 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
-        </article>
-      </section>
+        </div>
+      </article>
 
       <button
         class="button card__floppy-button"
@@ -518,15 +526,19 @@
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 40 40"
         >
-          <path
-            d="M.5.5h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm0 3h3v3h-3zm33-36v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm30 3v3h-3v-3zm-27 3v3h-3v-3zm0-3v3h-3v-3zm0 6v3h-3v-3zm21-3v3h-3v-3zm0-3v3h-3v-3zm0 6v3h-3v-3zm-6-3v3h-3v-3zm0-3v3h-3v-3zm0 6v3h-3v-3zm6 3v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm24 9v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm24 3v3h-3v-3zm-24 0v3h-3v-3zm24 3v3h-3v-3zm-24 0v3h-3v-3zm24 3v3h-3v-3zm-24 0v3h-3v-3zm0 3v3h-3v-3zm24 0v3h-3v-3zm3 3v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm-3 0v3h-3v-3zm33 3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3zm0-3h-3v-3h3z"
-          />
+          <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
 
       <dialog class="floppy-dialog" id="dialog-id">
-        <img class="floppy" src="./svg/floppy.svg" alt="Иконка дискеты" />
+        <svg
+          class="floppy"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 40 40"
+        >
+          <use href="./svg/floppy.svg#floppy"></use>
+        </svg>
         <p class="button__text">Вставьте дискету, чтобы продолжить</p>
         <button
           class="button dialog__button"
