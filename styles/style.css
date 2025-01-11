@@ -81,7 +81,7 @@
   position: relative;
   margin: 0;
   outline: solid var(--border-color, #000) 2px;
-  max-height: 696px;
+  block-size: clamp(350px, 100vw, 700px);
 }
 
 .image {
@@ -316,10 +316,6 @@
 
   .card__text:first-of-type {
     margin-block: 29px 27px;
-  }
-
-  .card__image {
-    max-height: 371px;
   }
 
   .card__image-label {
