@@ -9,13 +9,14 @@
 !!!
 
 
-* { outline: 1px solid green; }*/
+* { outline: 1px solid green; }
+*/
 
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-family: var(--main-font, sans-serif);
-  font-variation-settings: "wght"var(--heading-weight, 785);
+  font-variation-settings: "wght" var(--heading-weight, 785);
   background-attachment: fixed;
   background-image: var(--background-image);
   background-position: center;
@@ -25,7 +26,7 @@
 }
 
 .header {
-  max-inline-size: 700px;
+  inline-size: clamp(350px, 95vw, 700px);
   padding: 128px 120px;
   background-color: var(--background-color, #fff);
   border: var(--border-color, #000) solid 2px;
@@ -36,15 +37,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  container-type: inline-size;
+  container-name: header;
 }
 
 .header__title h1 {
-  font-size: var(--header-size, 65px);
+  font-size: clamp(3.063rem, 1.909rem + 4.923vi, 4.063rem);
   margin-block-end: 18px;
 }
 
 .header__title h2 {
-  font-size: var(--header-size-last, 23px);
+  font-size: clamp(0.875rem, 0.226rem + 2.769vi, 1.438rem);
 }
 
 .main {
@@ -53,7 +57,7 @@
 }
 
 .card {
-  max-inline-size: 700px;
+  inline-size: clamp(350px, 95vw, 700px);
   border: var(--border-color, #000) solid 2px;
   background-color: var(--background-color, #fff);
 }
@@ -65,7 +69,7 @@
 .card__title {
   margin: 3px auto 3px 10px;
   font-size: 18px;
-  font-variation-settings: "wght"var(--heading-weight, 700);
+  font-variation-settings: "wght" var(--heading-weight, 700);
   line-height: 21.78px;
 }
 
@@ -132,7 +136,10 @@
   right: 25px;
 }
 
-@supports ((text-stroke: 1px var(--label-stroke-color, #fff)) or (-webkit-text-stroke: 1px var(--label-stroke-color, #fff))) {
+@supports (
+  (text-stroke: 1px var(--label-stroke-color, #fff)) or
+    (-webkit-text-stroke: 1px var(--label-stroke-color, #fff))
+) {
   .card__image-label {
     -webkit-text-stroke: 1px var(--label-stroke-color, #fff);
     text-stroke: 1px var(--label-stroke-color, #fff);
@@ -141,7 +148,7 @@
 }
 
 .card__text {
-  font-variation-settings: "wght"var(--text-weight, 400);
+  font-variation-settings: "wght" var(--text-weight, 400);
   font-size: 18px;
   line-height: 117%;
   margin: 25px;
@@ -280,7 +287,7 @@
 
 @media (width <=375px) {
   .header {
-    inline-size: 375px;
+    inline-size: 100vw;
     margin-block-end: 100px;
     padding: 120px 14px;
   }
@@ -295,7 +302,7 @@
   }
 
   .card {
-    inline-size: 375px;
+    inline-size: 100vw;
   }
 
   .card:not(:last-of-type) {
